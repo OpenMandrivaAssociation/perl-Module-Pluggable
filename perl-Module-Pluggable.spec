@@ -1,6 +1,6 @@
 %define module	Module-Pluggable
 %define name	perl-%{module}
-%define version 3.5
+%define version 3.6
 %define release %mkrel 1
 
 Name:		%{name}
