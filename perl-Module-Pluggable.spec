@@ -15,7 +15,6 @@ Source:		http://www.cpan.org/modules/by-module/Module/%{module}-%{version}.tar.b
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This Perl module provides a simple but, hopefully, extensible way of having
