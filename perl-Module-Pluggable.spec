@@ -1,7 +1,7 @@
 %define module	Module-Pluggable
 %define name	perl-%{module}
-%define version 3.8
-%define release %mkrel 2
+%define version 3.9
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -10,11 +10,7 @@ Summary:	Simple plugins for Perl modules
 License:	Artistic/GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Module/%{module}-%{version}.tar.bz2
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
-BuildArch:	noarch
+Source:		http://www.cpan.org/modules/by-module/Module/%{module}-%{version}.tar.gz
 Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -42,8 +38,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc README Changes
-%{perl_vendorlib}/Module
-%{perl_vendorlib}/Devel
+%{perl_vendorarch}/Module
+%{perl_vendorarch}/Devel
 %{_mandir}/*/*
-
-
