@@ -1,24 +1,25 @@
-%define module	Module-Pluggable
-%define name	perl-%{module}
-%define version 3.9
-%define release %mkrel 1
+%define upstream_name	 Module-Pluggable
+%define upstream_version 3.9
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Simple plugins for Perl modules
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Module/%{module}-%{version}.tar.gz
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+
+BuildArch:  noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This Perl module provides a simple but, hopefully, extensible way of having
 'plugins' for your module.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -33,7 +34,6 @@ rm -rf %{buildroot}
 
 %clean
 rm -rf %{buildroot}
-
 
 %files
 %defattr(-,root,root)
