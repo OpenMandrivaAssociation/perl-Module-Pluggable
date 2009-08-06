@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Simple plugins for Perl modules
 License:	Artistic/GPL
@@ -11,7 +11,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildArch:  noarch
+BuildRequires:  perl-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
