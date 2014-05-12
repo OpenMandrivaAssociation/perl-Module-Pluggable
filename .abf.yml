@@ -1,2 +1,4 @@
+removed_sources:
+  Module-Pluggable-3.9.tar.gz: 4d7f73327c3e68aa096fe5faabe8dc3ad466fcfc
 sources:
-  "Module-Pluggable-3.9.tar.gz": 4d7f73327c3e68aa096fe5faabe8dc3ad466fcfc
+  Module-Pluggable-5.1.tar.gz: 237079d6f54a9ad5022eae02c02e734b39081b65

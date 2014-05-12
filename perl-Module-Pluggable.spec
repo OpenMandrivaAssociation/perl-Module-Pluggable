@@ -1,10 +1,11 @@
 %define modname	Module-Pluggable
-%define modver	3.9
+%define modver 5.1
 
 Summary:	Simple plugins for Perl modules
+
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	13
+Release:	1
 License:	Artistic/GPLv2
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -34,4 +35,5 @@ make test
 %{perl_vendorarch}/Module
 %{perl_vendorarch}/Devel
 %{_mandir}/man3/*
+
 
