@@ -36,5 +36,8 @@ make test
 %{perl_vendorarch}/Module
 %{perl_vendorarch}/Devel
 %{_mandir}/man3/*
+%{perl_vendorlib}/Devel/InnerPackage.pm
+%{perl_vendorlib}/Module/Pluggable.pm
+%{perl_vendorlib}/Module/Pluggable/Object.pm
 
 
