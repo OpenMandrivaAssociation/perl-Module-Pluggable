@@ -12,6 +12,7 @@ Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRequires: perl(Module::Build::Compat)
 
 %description
 This Perl module provides a simple but, hopefully, extensible way of having
