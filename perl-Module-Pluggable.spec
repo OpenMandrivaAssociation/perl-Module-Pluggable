@@ -1,43 +1,45 @@
-%define modname	Module-Pluggable
-%define modver 5.1
+%define upstream_name	 Module-Pluggable
+%define upstream_version 5.1
 
-Summary:	Simple plugins for Perl modules
+%define debug_package %{nil}
 
-Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	1
-License:	Artistic/GPLv2
-Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
-BuildArch:	noarch
-BuildRequires:	perl-devel
-BuildRequires: perl(Module::Build::Compat)
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    1
+
+Summary:    Simple plugins for Perl modules
+
+License:    Artistic/GPL
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+
+BuildRequires: perl(File::Basename)
+BuildRequires: perl(File::Spec) >= 3.0.0
+BuildRequires: perl(Module::Build) >= 0.380.0
+BuildRequires: perl(Test::More) >= 0.620.0
+BuildRequires: perl-devel
 
 %description
 This Perl module provides a simple but, hopefully, extensible way of having
 'plugins' for your module.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
+%__perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-make test
+%make test
 
 %install
 %makeinstall_std
 
 %files
-%doc README Changes
-# %{perl_vendorarch}/Module
-# %{perl_vendorarch}/Devel
-%{_mandir}/man3/*
-%{perl_vendorlib}/Devel/InnerPackage.pm
-%{perl_vendorlib}/Module/Pluggable.pm
-%{perl_vendorlib}/Module/Pluggable/Object.pm
-
+%doc Changes INSTALL META.json META.yml MYMETA.yml README
+%{perl_vendorlib}/Module
+%{perl_vendorlib}/Devel
+%{_mandir}/*/*
 
