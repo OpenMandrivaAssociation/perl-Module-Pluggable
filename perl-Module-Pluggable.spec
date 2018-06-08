@@ -1,11 +1,11 @@
 %define upstream_name	 Module-Pluggable
-%define upstream_version 5.1
+%define upstream_version 5.2
 
 %define debug_package %{nil}
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    7
+Release:    1
 
 Summary:    Simple plugins for Perl modules
 
