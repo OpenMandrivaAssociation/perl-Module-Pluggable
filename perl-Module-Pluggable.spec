@@ -38,8 +38,7 @@ This Perl module provides a simple but, hopefully, extensible way of having
 %makeinstall_std
 
 %files
-%doc Changes INSTALL META.json META.yml MYMETA.yml README
+%doc Changes INSTALL META.json META.yml README
 %{perl_vendorlib}/Module
 %{perl_vendorlib}/Devel
 %{_mandir}/*/*
-
