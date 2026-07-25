@@ -1,18 +1,18 @@
 %define upstream_name	 Module-Pluggable
-%define upstream_version 5.2
+%define upstream_version 6.3
 
 %define debug_package %{nil}
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    %{upstream_version}
+Release:    1
 
 Summary:    Simple plugins for Perl modules
 
 License:    Artistic/GPL
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://github.com/simonwistow/Module-Pluggable
+Source0:    https://cpan.metacpan.org/authors/id/S/SI/SIMONW/Module-Pluggable-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(File::Basename)
