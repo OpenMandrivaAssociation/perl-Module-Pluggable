@@ -1,18 +1,16 @@
 %define upstream_name	 Module-Pluggable
-%define upstream_version 6.3
-
 %define debug_package %{nil}
 
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    6.3
+Release:    2
 
 Summary:    Simple plugins for Perl modules
 
 License:    Artistic/GPL
 Group:      Development/Perl
 Url:        https://github.com/simonwistow/Module-Pluggable
-Source0:    https://cpan.metacpan.org/authors/id/S/SI/SIMONW/Module-Pluggable-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/S/SI/SIMONW/Module-Pluggable-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(File::Basename)
@@ -26,7 +24,7 @@ This Perl module provides a simple but, hopefully, extensible way of having
 'plugins' for your module.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
