@@ -2,8 +2,8 @@
 %define debug_package %{nil}
 
 Name:       perl-%{upstream_name}
-Version:    6.3
-Release:    2
+Version:    6.4
+Release:    1
 
 Summary:    Simple plugins for Perl modules
 
@@ -24,7 +24,7 @@ This Perl module provides a simple but, hopefully, extensible way of having
 'plugins' for your module.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n Module-Pluggable-6.4
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
